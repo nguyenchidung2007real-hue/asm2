@@ -15,6 +15,12 @@ san_pham=[
         "so_luong": 8
     }
 ]
+def load_data():
+     try:
+        with open ("san_pham","r") as f:    
+            print (f.read())
+     except FileNotFoundError:
+        print("Khong tim thay sp")
 json.dumps(san_pham)
 def them_sp(msp, ten, thuong_hieu, gia, so_luong):
     """Thêm sản phẩm mới"""
@@ -43,5 +49,5 @@ def tim_theo_id(ma):
             return sp
     return None
 
-def load_data():
+
     
