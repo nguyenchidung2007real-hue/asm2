@@ -22,6 +22,9 @@ def load_data():
      except FileNotFoundError:
         print("Khong tim thay sp")
 json.dumps(san_pham)
+def save_data():
+        with open ("san_pham","w") as f:
+            json.dump(san_pham,f)
 def them_sp(msp, ten, thuong_hieu, gia, so_luong):
     """Thêm sản phẩm mới"""
     sp_moi = {
