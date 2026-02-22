@@ -21,11 +21,10 @@ def load_data():
             print (f.read())
      except FileNotFoundError:
         print("Khong tim thay sp")
-json.dumps(san_pham)
 def save_data():
         with open ("san_pham","w") as f:
             json.dump(san_pham,f)
-def them_sp(msp, ten, thuong_hieu, gia, so_luong):
+def add_product(msp, ten, thuong_hieu, gia, so_luong):
     """Thêm sản phẩm mới"""
     sp_moi = {
         "id": msp,
@@ -34,9 +33,8 @@ def them_sp(msp, ten, thuong_hieu, gia, so_luong):
         "gia": gia,
         "so_luong": so_luong
     }
-    san_pham.append(sp_moi)
-    print(f"Đã thêm: {ten}")
-
+    with open ("san_pham","a") as f:
+        f.write(f"{sp_moi}")
 def hien_thi_tat_ca():
     if len(san_pham) == 0:
         print("Kho hàng trống!")
@@ -51,6 +49,5 @@ def tim_theo_id(ma):
         if sp["id"] == ma:
             return sp
     return None
-
 
     
