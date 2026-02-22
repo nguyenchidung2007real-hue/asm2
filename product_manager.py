@@ -46,13 +46,15 @@ def display_all_product():
             print(sp)
 
 def search_product_by_name(ma):
-    """Tìm sản phẩm theo mã"""
-    for sp in san_pham:
-        if sp["id"] == ma:
+   print( """Tìm sản phẩm theo mã""")
+   for sp in san_pham:
+      if sp["id"] == ma:
             print(sp)
-        else:
+      else:
             return None
-
-
-
-    
+def delete_product(ma):
+   for sp in san_pham:
+       if sp["id"] == ma:
+           with open ("san_pham","w")as f:
+               f.write("")
+               print(f)
