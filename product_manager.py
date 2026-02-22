@@ -15,12 +15,6 @@ san_pham=[
         "so_luong": 8
     }
 ]
-def load_data():
-     try:
-        with open ("san_pham","r") as f:    
-            print (f.read())
-     except FileNotFoundError:
-        print("Khong tim thay sp")
 def save_data():
         with open ("san_pham","w") as f:
             json.dump(san_pham,f)
