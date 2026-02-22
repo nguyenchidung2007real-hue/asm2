@@ -33,14 +33,16 @@ def add_product(msp, ten, thuong_hieu, gia, so_luong):
         "gia": gia,
         "so_luong": so_luong
     }
+
     with open ("san_pham","a") as f:
         f.write(f"{sp_moi}")
-def hien_thi_tat_ca():
+
+def display_all_product():
+
     if len(san_pham) == 0:
         print("Kho hàng trống!")
     else:
         for sp in san_pham:
-            print(sp)
             print(sp)
 
 def tim_theo_id(ma):
@@ -49,5 +51,6 @@ def tim_theo_id(ma):
         if sp["id"] == ma:
             return sp
     return None
+
 
     
