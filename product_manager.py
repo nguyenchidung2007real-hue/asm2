@@ -30,12 +30,11 @@ def them_sp(msp, ten, thuong_hieu, gia, so_luong):
     san_pham.append(sp_moi)
     print(f"Đã thêm: {ten}")
 
-def hien_thi_tat_ca():
+def display_all_product():
     if len(san_pham) == 0:
         print("Kho hàng trống!")
     else:
         for sp in san_pham:
-            print(sp)
             print(sp)
 
 def tim_theo_id(ma):
