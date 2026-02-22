@@ -45,12 +45,14 @@ def display_all_product():
         for sp in san_pham:
             print(sp)
 
-def tim_theo_id(ma):
+def search_product_by_name(ma):
     """Tìm sản phẩm theo mã"""
     for sp in san_pham:
         if sp["id"] == ma:
-            return sp
-    return None
+            print(sp)
+        else:
+            return None
+
 
 
     
