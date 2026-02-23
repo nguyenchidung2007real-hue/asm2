@@ -13,7 +13,7 @@ def main():
         chon = input("Chọn: ")
         
         if chon == "1":
-            product_manager.hien_thi_tat_ca()
+            product_manager.display_all_product()
         elif chon == "2":
             msp = input("Mã: ")
             ten = input("Tên: ")
