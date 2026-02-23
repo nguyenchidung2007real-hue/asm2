@@ -2,7 +2,7 @@ import product_manager
 
 def main():
     while True:
-        print("=== MENU ===")
+        print("==== MENU ====")
         print("1. Xem sản phẩm")
         print("2. Thêm sản phẩm")
         print("3. Tìm sản phẩm")
