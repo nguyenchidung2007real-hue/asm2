@@ -54,7 +54,21 @@ def search_product_by_name(ma):
             return None
 def delete_product(ma):
    for sp in san_pham:
-       if sp["id"] == ma:
-           with open ("san_pham","w")as f:
-               f.write("")
-               print(f)
+      if sp["id"] == ma:
+          san_pham.clear()
+          print(f"da xoa sp{ma}")
+      else:
+          print("khong hop le")
+def update_product(products):
+    ma = input("Nhập mã sp cần sửa: ")
+    
+    for sp in san_pham:
+        if sp["id"] == ma:
+            sp["ten"] = input("Ten moi: ")
+            sp["thuong_hieu"] = input("Thuong hieu moi: ")
+            sp["gia"] = input("Gia moi : ")
+            sp["so_luong"] = input("Số lượng mới: ") 
+            print("da cap nhat!")
+            return
+    print("Khong tim thay!")
+update_product("LT01")
